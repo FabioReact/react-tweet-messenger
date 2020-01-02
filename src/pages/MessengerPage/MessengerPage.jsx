@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import MessagePage from "../MessagePage/MessagePage"
 import SendMessageForm from "../SendMessageForm/SendMessageForm"
 import styles from "./messengerPage.module.css"
@@ -14,12 +14,12 @@ const MessengerPage = () => {
 		setSendMessage(prevValue => !prevValue)
 	}
 
-	const switchPrivacy = () => {
-		setPrivacy(prevPrivacy => {
-			const changedPrivacy = prevPrivacy === "public" ? "private" : "public"
+	const switchPrivacy = useCallback(() => {
+		setPrivacy(privacy => {
+			const changedPrivacy = privacy === "public" ? "private" : "public"
 			return changedPrivacy
 		})
-	}
+	}, [])
 
 	return (
 		<div className={styles.messengerPage}>

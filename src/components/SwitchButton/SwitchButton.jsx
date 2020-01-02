@@ -12,6 +12,7 @@ const SwitchButton = ({
 	textOff = "Off",
 	callback = () => null,
 }) => {
+	console.log("Switch renders")
 	const [checked, setChecked] = useState(true)
 	const onChangeHandler = () => {
 		setChecked(prevChecked => !prevChecked)
@@ -58,14 +59,16 @@ SwitchButton.propTypes = {
 	callback: PropTypes.func,
 }
 
-const propsAreEqual = (prevProps, nextProps) => {
-	return prevProps.id === nextProps.id
-		&& prevProps.height === nextProps.height
-		&& prevProps.colorOn === nextProps.colorOn
-		&& prevProps.colorOff === nextProps.colorOff
-		&& prevProps.colorText === nextProps.colorText
-		&& prevProps.textOn === nextProps.textOn
-		&& prevProps.textOff === nextProps.textOff
-}
+// Version si switchPrivacy était utilisée sans useCallback
+// const propsAreEqual = (prevProps, nextProps) => {
+// 	return prevProps.id === nextProps.id
+// 		&& prevProps.height === nextProps.height
+// 		&& prevProps.colorOn === nextProps.colorOn
+// 		&& prevProps.colorOff === nextProps.colorOff
+// 		&& prevProps.colorText === nextProps.colorText
+// 		&& prevProps.textOn === nextProps.textOn
+// 		&& prevProps.textOff === nextProps.textOff
+// }
 
-export default React.memo(SwitchButton, propsAreEqual)
+export default React.memo(SwitchButton)
+// export default React.memo(SwitchButton, propsAreEqual)
