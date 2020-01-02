@@ -1,0 +1,36 @@
+.span {
+	margin: 1.3em 0;
+	display: inline-block;
+	position: relative;
+}
+
+.span input {
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid var(--colorOff);
+	background: none;
+	font-size: 1.5em;
+	color: var(--colorOff);
+}
+
+.span input:focus {
+	outline: none;
+	border-bottom: 2px solid var(--colorOn);
+}
+
+.span input:focus + label, .span > label.filled {
+	top: -1.3em;
+	color: var(--colorOn);
+	font-size: 1.2em;
+}
+
+.span label {
+	color: var(--colorOff);
+	cursor: text;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: .2s;
+	font-size: 1.5em;
+	font-weight: 500;
+}

@@ -1,0 +1,19 @@
+.send {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	padding: 5px;
+	background-color: var(--color-dark);
+	border: none;
+	cursor: pointer;
+	border-radius: 50%;
+	outline: 0;
+}
+
+.send svg {
+	padding: 3px;
+	fill: #fff;
+	height: 30px;
+	width: 30px;
+	transform: translate(-3px, 1px);
+}

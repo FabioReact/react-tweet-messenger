@@ -1,0 +1,40 @@
+:root {
+	--color-light: hsl(206, 47%, 97%);
+	--color-dark: hsl(208, 12%, 25%);
+}
+
+.messengerPage {
+	background-color: var(--color-light);
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 90px auto;
+}
+
+.messengerPage p {
+	margin: 0;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	font-size: 18px;
+	background-color: var(--color-dark);
+	color: hsl(0, 0%, 100%);
+	text-align: center;
+	padding: 8px;
+	z-index: 2;
+}
+
+.header > p:first-of-type {
+	font-size: 20px;
+	padding: 12px 0;
+}
+
+.content {
+	justify-self: center;
+	max-width: 1000px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}

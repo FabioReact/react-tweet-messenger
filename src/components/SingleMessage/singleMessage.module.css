@@ -1,0 +1,26 @@
+.message {
+	background-color: #fff;
+	margin: 16px;
+	box-shadow: 1px 1px 4px 1px hsl(0, 0%, 90%);
+}
+
+.message span {
+	font-weight: 700;
+	padding: 10px 0;
+	display: block;
+	text-align: center;
+	position: relative;
+}
+.message span:after {
+	position: absolute;
+	left: 3px;
+	right: 3px;
+	bottom: 0;
+	content: "";
+	border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.message p {
+	padding: 10px;
+	font-size: 0.875rem;
+}

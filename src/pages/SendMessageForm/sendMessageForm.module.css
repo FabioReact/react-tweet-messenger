@@ -1,0 +1,51 @@
+:root {
+	--color-dark: hsl(208, 12%, 25%);
+}
+
+.sendForm {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.sendForm input {
+	outline: none;
+	border: 0;
+	background-color: unset;
+	border-bottom: 2px solid var(--color-dark);
+}
+
+.sendForm textarea {
+	outline: none;
+	border: 2px solid var(--color-dark);
+	height: 30vh;
+	resize: none;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex > * {
+	margin-top: 10px;
+}
+
+@media all and (min-width: 800px) {
+	.flex {
+		flex-direction: row;
+	}
+
+	.flex > :first-child {
+		order: 2;
+		margin-left: 5px;
+	}
+	
+	.flex > :nth-child(2) {
+		margin-right: 5px;
+	}
+
+	.flex > * {
+		width: 50%;
+	}
+}

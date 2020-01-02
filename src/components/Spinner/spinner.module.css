@@ -1,0 +1,26 @@
+.spinner {
+	position: relative;
+	height: var(--width);
+	width: var(--width);
+}
+
+.spinner:after {
+	position: absolute;
+	height: var(--width);
+	width: var(--width);
+	content: "";
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent var(--color) transparent var(--color);
+	border-radius: 50%;
+	animation: rotateSpinner 1.5s linear infinite;
+}
+
+@keyframes rotateSpinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
