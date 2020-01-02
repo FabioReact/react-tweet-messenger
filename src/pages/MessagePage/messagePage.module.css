@@ -17,3 +17,9 @@
 	width: 30px;
 	transform: translate(-3px, 1px);
 }
+
+@media all and (min-width: 1000px) {
+	.send {
+		right: calc((100vw - 1005px) / 2);
+	}
+}
